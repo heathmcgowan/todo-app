@@ -1,0 +1,225 @@
+$font-stack: 'Open Sans', sans-serif;
+$light-weight:    300;
+$regular-weight:  400;
+$semibold-weight: 600;
+$bold-weight:     700;
+$font-primary-color: #171717;
+$primary-color: #008eff;
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: $primary-color;
+    min-height: 100vh;
+}
+
+.main {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+// NAVBAR
+.navbar {
+    background-color: rgb(255, 255, 255);
+    padding: 13px 13px 10px 13px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.nav-logo {
+    width: 60px;
+    margin-right: 20px;
+}
+
+.nav-list {
+    display: flex;
+}
+
+.nav-item {
+    padding: 5px 10px;
+    border-right: 1px solid #7cb9e8;
+}
+
+.nav-item:last-child {
+    border-right: none;
+}
+
+.nav-link {
+    font-size: 20px;
+    color: $primary-color;
+    font-weight: $semibold-weight;
+    text-decoration: none;
+    transition: color 0.15s ease;
+    img {
+        transition: opacity 0.1s ease;
+    }
+}
+
+.nav-link:hover {
+    color: #7cb9e8;
+    img {
+        opacity: 0.8;
+    }
+}
+
+// COMPONENTS
+.component-container {
+    background: rgba(255, 255, 255, 0.5);
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+// CREATE TASK
+.create-todo-container {
+    min-width: 400px;
+}
+
+.create-todo-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
+    label {
+        font-size: 20px;
+        font-weight: $regular-weight;
+        margin-bottom: 3px;
+    }
+}
+
+.form-control {
+    font-family: $font-stack;
+    font-size: 18px;
+    padding: 7px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    outline: none;
+}
+
+.form-control:focus {
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 1pt 1pt $primary-color;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        input {
+            transform: scale(1.6);
+            margin: 10px;
+            cursor: pointer;
+        }
+    }
+}
+
+.create-todo-submit {
+    width: 100%;
+    padding: 10px;
+    margin: 25px 0 5px 0;
+    font-size: 20px;
+    font-family: $font-stack;
+    font-weight: $regular-weight;
+    background-color: $primary-color;
+    border-radius: 5px;
+    color: #ffffff;
+}
+
+.create-todo-submit:hover {
+    background-color: #3aa2f2;
+}
+
+//TASK LIST
+.todo-list-container {
+    width: 100%;
+    max-width: 800px;
+}
+
+.table-wrapper {
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 10px 0;
+    table {
+        background-color: #ffffff;
+        border-collapse: collapse;
+        th {
+            font-weight: $semibold-weight;
+            text-align: left;
+            background-color: $primary-color;
+            color: #ffffff;
+            padding: 10px;
+        }
+        tr {
+            background-color: #efefef;
+            outline: none;
+            border: none;
+        }
+        tr:nth-child(even) {
+            background: #ffffff;
+            td:nth-child(even) {
+                background-color: #fafafa;
+            }
+        }
+        tr:nth-child(odd) {
+            td:nth-child(even) {
+                background-color: #eaeaea;
+            }
+        }
+        td {
+            padding: 10px;
+            vertical-align: top;
+            font-size: 15px;
+        }
+        td:last-child {
+            display: flex;
+        }
+    }
+}
+
+.todo-action-button {
+    text-decoration: none;
+    padding: 4px 10px;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.edit-todo-button {
+    background-color: $primary-color;
+}
+
+.edit-todo-button:hover {
+    background-color: #3aa2f2;
+}
+
+.delete-todo-button {
+    margin-left: 7px;
+    background-color: #ff5e5e;
+}
+
+.delete-todo-button:hover {
+    background-color: #fc7474;
+}
+
+.completed-task {
+    text-decoration: line-through;
+}
